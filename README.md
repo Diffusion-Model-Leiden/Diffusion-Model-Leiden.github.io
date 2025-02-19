@@ -1,4 +1,4 @@
-# diffusion-model-leiden.github.io
+# [diffusion-model-leiden.github.io]((https://http://diffusion-model-leiden.github.io))
 
 > This is the website repo for the the survey "**[Diffusion Models For Tabular Data](https://http://diffusion-model-leiden.github.io)**".
 >
