@@ -1,41 +1,238 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sortable Table</title>
-    
-    <!-- DataTables CSS -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
-    
-    <!-- jQuery + DataTables -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-    
-    <script>
-        $(document).ready(function () {
-            $('#myTable').DataTable();  // Activate DataTables
-        });
-    </script>
+  <meta charset="utf-8">
+  <meta name="description" content="Diffusion Models For Tabular Data">
+  <meta name="keywords" content="Diffusion models, tabular data">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Diffusion Models For Tabular Data</title>
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/icon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <style>
+    .grey-box {
+        background-color: #c0c0c0; /* Grey color */
+        color: rgb(70, 70, 70); /* White text color */
+        padding: 20px; /* Padding inside the box */
+        margin: 20px; /* Margin outside the box */
+        text-align: center; /* Center the text */
+    }
+  </style>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
 </head>
+
 <body>
+    
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
 
-<h2>Sortable & Searchable Table</h2>
+            <h1 id="Diffusion Models for Tabular Data: Challenges, Current Progress, and Future Directions" class="title is-2 publication-title">Diffusion Models for Tabular Data: Challenges, Current Progress, and Future Directions
+            </h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://david-li0406.github.io/
+              ">Dawei Li</a>,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=WcwrsNAAAAAJ&hl=en
+              ">Renliang Sun</a>,</span>
+              <span class="author-block">
+                <a href="https://howiehwong.github.io/
+              ">Yue Huang</a>,</span>
+              <span class="author-block">
+                <a href="https://maszhongming.github.io/
+              ">Ming Zhong</a>,</span>
+              <span class="author-block">
+                <a href="https://jiangbohan.github.io/
+              ">Bohan Jiang</a>,</span>
+              <span class="author-block">
+                <a href="https://hanj.cs.illinois.edu/
+              "><br>
+              Jiawei Han</a>,</span>
+              <span class="author-block">
+                <a href="https://sites.nd.edu/xiangliang-zhang/
+              ">Xiangliang Zhang</a>,</span>
+              <span class="author-block">
+                <a href="https://web.cs.ucla.edu/~weiwang/
+              ">Wei Wang</a>,</span>
+              <span class="author-block">
+                <a href="https://www.public.asu.edu/~huanliu/
+              ">Huan Liu</a>,</span>
+              <span class="author-block">
+            </div>
 
-<table id="myTable" class="display">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Country</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr><td>Alice</td><td>25</td><td>USA</td></tr>
-        <tr><td>Bob</td><td>30</td><td>UK</td></tr>
-        <tr><td>Charlie</td><td>22</td><td>Canada, USA</td></tr>
-    </tbody>
-</table>
+            <div class="is-size-5 publication-authors">
+                <div class="author-block">Arizona State University, </div>
+                <div class="author-block">University of California, Los Angeles, </div>
+                <div class="author-block">University of Notre Dame, </div>
+                <div class="author-block">University of Illinois Urbana Champaign, </div>
+            </div>
 
+    
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2502.01534" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2502.01534" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Arxiv</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href="https://github.com/David-Li0406/Preference-Leakage"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                    </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+
+    <div class="container is-max-desktop">
+      <!-- Method -->
+      <!-- <br /> -->
+      <figure style="text-align: center;">
+        <img src="static/images/preference_leakage.png" alt="preference_leakage">
+      </figure>
+    </div>
+    <br>    <br>
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>Large Language Models (LLMs) as judges and LLM-based data synthesis have emerged as two fundamental LLM-driven data annotation methods in model development. While their combination significantly enhances the efficiency of model training and evaluation, little attention has been given to the potential contamination brought by this new model development paradigm. In this work, we expose preference leakage, a contamination problem in LLM-as-a-judge caused by the relatedness between the synthetic data generators and LLM-based evaluators. To study this issue, we first define three common relatednesses between data generator LLM and judge LLM: being the same model, having an inheritance relationship, and belonging to the same model family. Through extensive experiments, we empirically confirm the bias of judges towards their related student models caused by preference leakage across multiple LLM baselines and benchmarks. Further analysis suggests that preference leakage is a pervasive issue that is harder to detect compared to previously identified biases in LLM-as-a-judge scenarios. All of these findings imply that preference leakage is a widespread and challenging problem in the area of LLM-as-a-judge.
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- </section>
+  <section class="section"> -->
+    <!-- <br>
+    <br>
+    <div class="container is-max-desktop">
+      <figure>
+        <img src="static/images/survey.png" alt="survey">
+      </figure>
+    </div> -->
+  </section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{li2025preference,
+      title={Preference Leakage: A Contamination Problem in LLM-as-a-judge}, 
+      author={Dawei Li and Renliang Sun and Yue Huang and Ming Zhong and Bohan Jiang and Jiawei Han and Xiangliang Zhang and Wei Wang and Huan Liu},
+      year={2025},
+      eprint={2502.01534},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2502.01534}, 
+}</code></pre>
+  </div>
+</section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+            <p>
+              This means you are free to borrow the <a href="https://github.com/nerfies/nerfies.github.io">source
+                code</a> of this website,
+              we just ask that you link back to this page in the footer.
+              Please remember to remove the analytics code included in the header of the website which
+              you do not want on your website.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<!-- Default Statcounter code for llm-as-a-judge
+https://llm-as-a-judge.github.io/ -->
+<script type="text/javascript">
+  var sc_project=13064209; 
+  var sc_invisible=1; 
+  var sc_security="2f99ac8e"; 
+  </script>
+  <script type="text/javascript"
+  src="https://www.statcounter.com/counter/counter.js" async></script>
+  <noscript><div class="statcounter"><a title="Web Analytics"
+  href="https://statcounter.com/" target="_blank"><img class="statcounter"
+  src="https://c.statcounter.com/13064209/0/2f99ac8e/1/" alt="Web Analytics"
+  referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+  <!-- End of Statcounter Code -->
 </body>
+<script>
+  function changeContent() {
+    const dropdown = document.getElementById("dropdown");
+    const selected = dropdown.value;
+    const sections = ["example_1", "example_2", "example_3", "example_4", "example_5", "example_6", "example_7", "example_8", "example_9", "example_10", "example_11", "example_12", "example_13", "example_14"];
+
+    sections.forEach((section) => {
+      document.getElementById(section).style.display = (section === selected) ? "block" : "none";
+    });
+  }
+</script>
+
+
+
+
 </html>
